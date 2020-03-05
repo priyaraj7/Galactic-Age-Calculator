@@ -49,11 +49,31 @@ describe("PersonAge", () => {
   test("should correctly give the person age on Jupiter", () => {
     let ageJupiter = new PersonAge("1945-07-30");
 
-    expect(ageJupiter.calculateAgeJupiter()).toEqual(6.2);
+    expect(ageJupiter.calculateAgeJupiter()).toEqual("6.2");
   });
   test("should correctly give the person age on Jupiter", () => {
     let ageJupiter  = new PersonAge("2000-1-1");
 
-    expect(ageJupiter.calculateAgeJupiter()).toEqual(1.7);
+    expect(ageJupiter.calculateAgeJupiter()).toEqual("1.7");
+  });
+  test("should correctly give the person age left to live on Mercury", () => {
+    let leftAgeMercury  = new PersonAge("2000-1-1");
+
+    expect(leftAgeMercury.leftAgeOnMercury()).toBeCloseTo(244.7, 0);
+  });
+  test("should correctly give the person age left to live on Venus", () => {
+    let leftAgeVenus  = new PersonAge("2000-1-1");
+
+    expect(leftAgeVenus.leftAgeOnVenus()).toBeCloseTo(95.7, 0);
+  });
+  test("should correctly give the person age left to live on Mars", () => {
+    let leftAgeMars  = new PersonAge("2000-1-1");
+
+    expect(leftAgeMars.leftAgeOnMars()).toBeCloseTo(31.3, 0);
+  });
+  test("should correctly give the person age left to live on Jupiter", () => {
+    let leftAgeJupiter  = new PersonAge("2000-1-1");
+
+    expect(leftAgeJupiter.leftAgeOnJupiter()).toBeCloseTo(4.9, 0);
   });
 });

@@ -1,3 +1,4 @@
+const lifeExpectancy = 79;
 // calculate age
 export class PersonAge {
   constructor(dob) {
@@ -30,7 +31,20 @@ export class PersonAge {
     return Math.floor((this.calculateAge()*365)/687)
   }
   calculateAgeJupiter() {
-    return parseFloat((this.calculateAge()/12).toFixed(1))
+    return (this.calculateAge()/12).toFixed(1)
+  }
+
+  leftAgeOnMercury() {
+    return ((lifeExpectancy-this.calculateAge())*365)/88
+  }
+  leftAgeOnVenus() {
+    return ((lifeExpectancy-this.calculateAge())*365)/225
+  }
+  leftAgeOnMars() {
+    return ((lifeExpectancy-this.calculateAge())*365)/687
+  }
+  leftAgeOnJupiter() {
+    return (lifeExpectancy-this.calculateAge())/12
   }
 }
 
