@@ -29,6 +29,9 @@ export class PersonAge {
   calculateAgeMars() {
     return Math.floor((this.calculateAge()*365)/687)
   }
+  calculateAgeJupiter() {
+    return parseFloat((this.calculateAge()/12).toFixed(1))
+  }
 }
 
 

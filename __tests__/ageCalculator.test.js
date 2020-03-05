@@ -46,4 +46,14 @@ describe("PersonAge", () => {
 
     expect(ageMars.calculateAgeMars()).toEqual(10);
   });
+  test("should correctly give the person age on Jupiter", () => {
+    let ageJupiter = new PersonAge("1945-07-30");
+
+    expect(ageJupiter.calculateAgeJupiter()).toEqual(6.2);
+  });
+  test("should correctly give the person age on Jupiter", () => {
+    let ageJupiter  = new PersonAge("2000-1-1");
+
+    expect(ageJupiter.calculateAgeJupiter()).toEqual(1.7);
+  });
 });
