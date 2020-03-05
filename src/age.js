@@ -15,10 +15,13 @@ export class PersonAge {
     const ageDate = new Date(diff);
 
     // check: 1989 = 1970 + 19
-    console.log(ageDate.getUTCFullYear()); // 1989
+    //console.log(ageDate.getUTCFullYear()); // 1989
 
     // age = year if person was born in 1970 (= 1989) - 1970 = 19
     return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+  calculateAgeMercury() {
+    return Math.floor((this.calculateAge()*365)/88)
   }
 }
 
