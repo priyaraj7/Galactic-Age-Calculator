@@ -22,16 +22,16 @@ export class PersonAge {
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   }
   calculateAgeMercury() {
-    return Math.floor((this.calculateAge()*365)/88)
+    return (this.calculateAge()*365)/88
   }
   calculateAgeVenus() {
-    return Math.floor((this.calculateAge()*365)/225)
+    return (this.calculateAge()*365)/225
   }
   calculateAgeMars() {
-    return Math.floor((this.calculateAge()*365)/687)
+    return (this.calculateAge()*365)/687
   }
   calculateAgeJupiter() {
-    return (this.calculateAge()/12).toFixed(1)
+    return this.calculateAge()/12
   }
 
   leftAgeOnMercury() {

@@ -19,42 +19,42 @@ describe("PersonAge", () => {
   test("should correctly give the person age on Mercury", () => {
     let ageMercury = new PersonAge("1945-07-30");
 
-    expect(ageMercury.calculateAgeMercury()).toEqual(306);
+    expect(ageMercury.calculateAgeMercury()).toBeCloseTo(306.9, 0);
   });
   test("should correctly give the person age on Mercury", () => {
     let ageMercury  = new PersonAge("2000-1-1");
 
-    expect(ageMercury.calculateAgeMercury()).toEqual(82);
+    expect(ageMercury.calculateAgeMercury()).toBeCloseTo(82.9, 0);
   });
   test("should correctly give the person age on Venus", () => {
     let ageVenus = new PersonAge("1945-07-30");
 
-    expect(ageVenus.calculateAgeVenus()).toEqual(120);
+    expect(ageVenus.calculateAgeVenus()).toBeCloseTo(120.0, 0);
   });
   test("should correctly give the person age on Venus", () => {
     let ageVenus  = new PersonAge("2000-1-1");
 
-    expect(ageVenus.calculateAgeVenus()).toEqual(32);
+    expect(ageVenus.calculateAgeVenus()).toBeCloseTo(32.4, 0);
   });
   test("should correctly give the person age on Mars", () => {
     let ageMars = new PersonAge("1945-07-30");
 
-    expect(ageMars.calculateAgeMars()).toEqual(39);
+    expect(ageMars.calculateAgeMars()).toBeCloseTo(39.3, 0);
   });
   test("should correctly give the person age on Mars", () => {
     let ageMars  = new PersonAge("2000-1-1");
 
-    expect(ageMars.calculateAgeMars()).toEqual(10);
+    expect(ageMars.calculateAgeMars()).toBeCloseTo(10.6, 0);
   });
   test("should correctly give the person age on Jupiter", () => {
     let ageJupiter = new PersonAge("1945-07-30");
 
-    expect(ageJupiter.calculateAgeJupiter()).toEqual("6.2");
+    expect(ageJupiter.calculateAgeJupiter()).toBeCloseTo(6.2, 0);
   });
   test("should correctly give the person age on Jupiter", () => {
     let ageJupiter  = new PersonAge("2000-1-1");
 
-    expect(ageJupiter.calculateAgeJupiter()).toEqual("1.7");
+    expect(ageJupiter.calculateAgeJupiter()).toBeCloseTo(1.6, 0);
   });
   test("should correctly give the person age left to live on Mercury", () => {
     let leftAgeMercury  = new PersonAge("2000-1-1");
