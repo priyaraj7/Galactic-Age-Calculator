@@ -23,6 +23,12 @@ export class PersonAge {
   calculateAgeMercury() {
     return Math.floor((this.calculateAge()*365)/88)
   }
+  calculateAgeVenus() {
+    return Math.floor((this.calculateAge()*365)/225)
+  }
+  calculateAgeMars() {
+    return Math.floor((this.calculateAge()*365)/687)
+  }
 }
 
 
