@@ -22,7 +22,7 @@ describe("PersonAge", () => {
     expect(ageMercury.calculateAgeMercury()).toBeCloseTo(306.9, 0);
   });
   test("should correctly give the person age on Mercury", () => {
-    let ageMercury  = new PersonAge("2000-1-1");
+    let ageMercury = new PersonAge("2000-1-1");
 
     expect(ageMercury.calculateAgeMercury()).toBeCloseTo(82.9, 0);
   });
@@ -32,7 +32,7 @@ describe("PersonAge", () => {
     expect(ageVenus.calculateAgeVenus()).toBeCloseTo(120.0, 0);
   });
   test("should correctly give the person age on Venus", () => {
-    let ageVenus  = new PersonAge("2000-1-1");
+    let ageVenus = new PersonAge("2000-1-1");
 
     expect(ageVenus.calculateAgeVenus()).toBeCloseTo(32.4, 0);
   });
@@ -42,7 +42,7 @@ describe("PersonAge", () => {
     expect(ageMars.calculateAgeMars()).toBeCloseTo(39.3, 0);
   });
   test("should correctly give the person age on Mars", () => {
-    let ageMars  = new PersonAge("2000-1-1");
+    let ageMars = new PersonAge("2000-1-1");
 
     expect(ageMars.calculateAgeMars()).toBeCloseTo(10.6, 0);
   });
@@ -52,28 +52,54 @@ describe("PersonAge", () => {
     expect(ageJupiter.calculateAgeJupiter()).toBeCloseTo(6.2, 0);
   });
   test("should correctly give the person age on Jupiter", () => {
-    let ageJupiter  = new PersonAge("2000-1-1");
+    let ageJupiter = new PersonAge("2000-1-1");
 
     expect(ageJupiter.calculateAgeJupiter()).toBeCloseTo(1.6, 0);
   });
   test("should correctly give the person age left to live on Mercury", () => {
-    let leftAgeMercury  = new PersonAge("2000-1-1");
+    let leftAgeMercury = new PersonAge("2000-1-1");
 
     expect(leftAgeMercury.leftAgeOnMercury()).toBeCloseTo(244.7, 0);
   });
   test("should correctly give the person age left to live on Venus", () => {
-    let leftAgeVenus  = new PersonAge("2000-1-1");
+    let leftAgeVenus = new PersonAge("2000-1-1");
 
     expect(leftAgeVenus.leftAgeOnVenus()).toBeCloseTo(95.7, 0);
   });
   test("should correctly give the person age left to live on Mars", () => {
-    let leftAgeMars  = new PersonAge("2000-1-1");
+    let leftAgeMars = new PersonAge("2000-1-1");
 
     expect(leftAgeMars.leftAgeOnMars()).toBeCloseTo(31.3, 0);
   });
   test("should correctly give the person age left to live on Jupiter", () => {
-    let leftAgeJupiter  = new PersonAge("2000-1-1");
+    let leftAgeJupiter = new PersonAge("2000-1-1");
 
     expect(leftAgeJupiter.leftAgeOnJupiter()).toBeCloseTo(4.9, 0);
   });
 });
+// .............................................................
+
+  describe('should correctly give the number of years person have lived past the life expectancy on planet', () => {
+    let surpassedAgePlanet;
+    beforeEach(() => {
+      surpassedAgePlanet = new PersonAge("1920-1-1");
+    })
+    test("on Earth.", () => {
+      expect(surpassedAgePlanet.surpassedAgeOnEarth()).toEqual(21);
+    });
+    test("on mercury", () => {
+      expect(surpassedAgePlanet.surpassedAgeOnMercury()).toBeCloseTo(87.1, 0);
+    }); 
+
+    test("on venus", () => {
+      expect(surpassedAgePlanet.surpassedAgeOnVenus()).toBeCloseTo(34.0, 0);
+    });
+      test("on mars", () => {
+      expect(surpassedAgePlanet.surpassedAgeOnMars()).toBeCloseTo(11.1, 0);
+    });
+      test("on jupiter", () => {
+      expect(surpassedAgePlanet.surpassedAgeOnJupiter()).toBeCloseTo(1.7, 0);
+    });
+  })
+  
+
