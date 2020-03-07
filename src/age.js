@@ -22,8 +22,9 @@ export class PersonAge {
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   }
   calculateAgeOnEarth() {
-    return 
+    return `Your age on Earth is ${this.calculateAge()} years`;
   }
-
-
-// http://www.spacegrant.hawaii.edu/class_acts/HowOld.html
+  calculateAgeOnMercury() {
+    
+  }
+}
