@@ -9,6 +9,10 @@ describe("Current PersonAge", () => {
     let age = new PersonAge("2000-1-1");
     expect(age.calculateAgeOnMercury()).toEqual(`Your age on Mercury is 83 years`);
   });
+  test("should correctly give the person age on Venus", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.calculateAgeOnVenus()).toEqual(`Your age on Venus is 33 years`);
+  });
 });
 
 // test("should correctly give the person age on Earth", () => {
