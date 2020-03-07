@@ -55,10 +55,10 @@ describe("Current status of PersonAge", () => {
   });
   test("should correctly give the current status of person age on Mars", () => {
     let age = new PersonAge("2000-1-1");
-    expect(age.getStatusOnMars()).toEqual(`You have 32 years left on Mars`);
+    expect(age.getStatusOnMars()).toEqual(`You have 31 years left on Mars`);
     let oldAge = new PersonAge("1920-1-1");
     expect(oldAge.getStatusOnMars()).toEqual(
-      `You have lived past 11 years on Mars`
+      `You have lived past 12 years on Mars`
     );
   });
   test("should correctly give the current status of person age on Jupiter", () => {

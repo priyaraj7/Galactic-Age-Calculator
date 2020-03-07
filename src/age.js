@@ -55,6 +55,24 @@ export class PersonAge {
            return `You have lived past ${age - lifeExpectancy } years on Mercury`;
          }
       }
+      getStatusOnVenus() {
+        const age = Math.ceil(this.calculateAge() * 365 / 225);
+        const lifeExpectancy = Math.ceil(79 * 365 / 225)
+         if(lifeExpectancy >= age) {
+           return `You have ${lifeExpectancy - age} years left on Venus`;
+         } else {
+           return `You have lived past ${age - lifeExpectancy } years on Venus`;
+         }
+      }
+      getStatusOnMars() {
+        const age = Math.ceil(this.calculateAge() * 365 / 687);
+        const lifeExpectancy = Math.ceil(79 * 365 / 687)
+         if(lifeExpectancy >= age) {
+           return `You have ${lifeExpectancy - age} years left on Mars`;
+         } else {
+           return `You have lived past ${age - lifeExpectancy } years on Mars`;
+         }
+      }
 
 
 }
