@@ -42,7 +42,7 @@ export class PersonAge {
          if(lifeExpectancy >= age) {
            return `You have ${lifeExpectancy - age} years left on Earth`;
          } else {
-           return `You have lived past ${age - lifeExpectancy } years`;
+           return `You have lived past ${age - lifeExpectancy } years on Earth`;
          }
       }
 }

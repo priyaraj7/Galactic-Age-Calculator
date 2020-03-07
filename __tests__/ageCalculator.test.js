@@ -7,7 +7,9 @@ describe("Current PersonAge", () => {
   });
   test("should correctly give the person age on Mercury", () => {
     let age = new PersonAge("2000-1-1");
-    expect(age.calculateAgeOnMercury()).toEqual(`Your age on Mercury is 83 years`);
+    expect(age.calculateAgeOnMercury()).toEqual(
+      `Your age on Mercury is 83 years`
+    );
   });
   test("should correctly give the person age on Venus", () => {
     let age = new PersonAge("2000-1-1");
@@ -19,12 +21,28 @@ describe("Current PersonAge", () => {
   });
   test("should correctly give the person age on Jupiter", () => {
     let age = new PersonAge("2000-1-1");
-    expect(age.calculateAgeOnJupiter()).toEqual(`Your age on Jupiter is 2 years`);
+    expect(age.calculateAgeOnJupiter()).toEqual(
+      `Your age on Jupiter is 2 years`
+    );
   });
 });
 describe("Current status of PersonAge", () => {
-  let age = new PersonAge("2000-1-1");
-  expect(age.getStatusOnEarth()).toEqual(`You have 52 years left on Earth`);
+  test("should correctly give the current status of person age on Earth", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.getStatusOnEarth()).toEqual(`You have 59 years left on Earth`);
+    let oldAge = new PersonAge("1920-1-1");
+    expect(oldAge.getStatusOnEarth()).toEqual(
+      `You have lived past 21 years on Earth`
+    );
+  });
+  test("should correctly give the current status of person age on Mercury", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.getStatusOnMercury()).toEqual(`You have 245 years left on Mercury`);
+    let oldAge = new PersonAge("1920-1-1");
+    expect(oldAge.getStatusOnMercury()).toEqual(
+      `You have lived past 88 years on Mercury`
+    );
+  });
 });
 
 // test("should correctly give the person age on Earth", () => {
