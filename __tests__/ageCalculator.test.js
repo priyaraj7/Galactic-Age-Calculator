@@ -22,6 +22,10 @@ describe("Current PersonAge", () => {
     expect(age.calculateAgeOnJupiter()).toEqual(`Your age on Jupiter is 2 years`);
   });
 });
+describe("Current status of PersonAge", () => {
+  let age = new PersonAge("2000-1-1");
+  expect(age.getStatusOnEarth()).toEqual(`You have 52 years left on Earth`);
+});
 
 // test("should correctly give the person age on Earth", () => {
 //   let age = new PersonAge("2015-06-17");

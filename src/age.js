@@ -33,4 +33,16 @@ export class PersonAge {
   calculateAgeOnMars() {
     return `Your age on Mars is ${Math.ceil(this.calculateAge() * 365 / 687)} years`
   }
+  calculateAgeOnJupiter() {
+    return `Your age on Jupiter is ${Math.ceil(this.calculateAge()/ 12)} years`
+  }
+
+  getStatusOnEarth() {
+        const age = this.calculateAge();
+         if(lifeExpectancy >= age) {
+           return `You have ${lifeExpectancy - age} years left on Earth`;
+         } else {
+           return `You have lived past ${age - lifeExpectancy } years`;
+         }
+      }
 }
