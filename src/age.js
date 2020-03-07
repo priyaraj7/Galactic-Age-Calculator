@@ -1,4 +1,4 @@
-const lifeExpectancy = 79;
+
 // calculate age
 export class PersonAge {
   constructor(dob) {
@@ -39,10 +39,24 @@ export class PersonAge {
 
   getStatusOnEarth() {
         const age = this.calculateAge();
+        const lifeExpectancy = 79;
          if(lifeExpectancy >= age) {
            return `You have ${lifeExpectancy - age} years left on Earth`;
          } else {
            return `You have lived past ${age - lifeExpectancy } years on Earth`;
          }
       }
+      getStatusOnMercury() {
+        const age = Math.ceil(this.calculateAge() * 365 / 88);
+        const lifeExpectancy = Math.ceil(79 * 365 / 88)
+         if(lifeExpectancy >= age) {
+           return `You have ${lifeExpectancy - age} years left on Mercury`;
+         } else {
+           return `You have lived past ${age - lifeExpectancy } years on Mercury`;
+         }
+      }
+
+
 }
+
+

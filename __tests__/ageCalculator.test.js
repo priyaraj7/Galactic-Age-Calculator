@@ -37,62 +37,46 @@ describe("Current status of PersonAge", () => {
   });
   test("should correctly give the current status of person age on Mercury", () => {
     let age = new PersonAge("2000-1-1");
-    expect(age.getStatusOnMercury()).toEqual(`You have 245 years left on Mercury`);
+    expect(age.getStatusOnMercury()).toEqual(
+      `You have 245 years left on Mercury`
+    );
     let oldAge = new PersonAge("1920-1-1");
     expect(oldAge.getStatusOnMercury()).toEqual(
-      `You have lived past 88 years on Mercury`
+      `You have lived past 87 years on Mercury`
+    );
+  });
+  test("should correctly give the current status of person age on Venus", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.getStatusOnVenus()).toEqual(`You have 96 years left on Venus`);
+    let oldAge = new PersonAge("1920-1-1");
+    expect(oldAge.getStatusOnVenus()).toEqual(
+      `You have lived past 34 years on Venus`
+    );
+  });
+  test("should correctly give the current status of person age on Mars", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.getStatusOnMars()).toEqual(`You have 32 years left on Mars`);
+    let oldAge = new PersonAge("1920-1-1");
+    expect(oldAge.getStatusOnMars()).toEqual(
+      `You have lived past 11 years on Mars`
+    );
+  });
+  test("should correctly give the current status of person age on Jupiter", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.getStatusOnJupiter()).toEqual(
+      `You have 5 years left on Jupiter`
+    );
+    let oldAge = new PersonAge("1920-1-1");
+    expect(oldAge.getStatusOnJupiter()).toEqual(
+      `You have lived past 2 years on Jupiter`
     );
   });
 });
 
-// test("should correctly give the person age on Earth", () => {
-//   let age = new PersonAge("2015-06-17");
+//
 
-//   expect(age.calculateAge()).toEqual(4);
-// });
-// test("should correctly give the person age on Earth", () => {
-//   let age = new PersonAge("1945-07-30");
-
-//   expect(age.calculateAge()).toEqual(74);
-// });
-// test("should correctly give the person age on Mercury", () => {
-//   let ageMercury = new PersonAge("1945-07-30");
-//   expect(ageMercury.calculateAgeMercury()).toEqual('Your age on Mercury is 306.9 years');
-// });
-// test("should correctly give the person age on Mercury", () => {
-//   let ageMercury = new PersonAge("2000-1-1");
-
-//   expect(ageMercury.calculateAgeMercury()).toBeCloseTo(82.9, 0);
-// });
-// test("should correctly give the person age on Venus", () => {
-//   let ageVenus = new PersonAge("1945-07-30");
-
-//   expect(ageVenus.calculateAgeVenus()).toBeCloseTo(120.0, 0);
-// });
-// test("should correctly give the person age on Venus", () => {
-//   let ageVenus = new PersonAge("2000-1-1");
-
-//   expect(ageVenus.calculateAgeVenus()).toBeCloseTo(32.4, 0);
-// });
-// test("should correctly give the person age on Mars", () => {
-//   let ageMars = new PersonAge("1945-07-30");
-
-//   expect(ageMars.calculateAgeMars()).toBeCloseTo(39.3, 0);
-// });
-// test("should correctly give the person age on Mars", () => {
-//   let ageMars = new PersonAge("2000-1-1");
-
-//   expect(ageMars.calculateAgeMars()).toBeCloseTo(10.6, 0);
-// });
-// test("should correctly give the person age on Jupiter", () => {
-//   let ageJupiter = new PersonAge("1945-07-30");
-
-//   expect(ageJupiter.calculateAgeJupiter()).toBeCloseTo(6.2, 0);
-// });
-// test("should correctly give the person age on Jupiter", () => {
-//   let ageJupiter = new PersonAge("2000-1-1");
-
-//   expect(ageJupiter.calculateAgeJupiter()).toBeCloseTo(1.6, 0);
+//
+//
 // });
 // test("should correctly give the person age left to live on Mercury", () => {
 //   let leftAgeMercury = new PersonAge("2000-1-1");
