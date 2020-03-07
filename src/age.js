@@ -21,55 +21,72 @@ export class PersonAge {
     // age = year if person was born in 1970 (= 1989) - 1970 = 19
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   }
-  calculateAgeMercury() {
-    return (this.calculateAge() * 365) / 88;
-  }
-  calculateAgeVenus() {
-    return (this.calculateAge() * 365) / 225;
-  }
-  calculateAgeMars() {
-    return (this.calculateAge() * 365) / 687;
-  }
-  calculateAgeJupiter() {
-    return this.calculateAge() / 12;
-  }
-  leftAgeOnEarth() {
-    return lifeExpectancy - this.calculateAge();
-  }
-  leftAgeOnMercury() {
-    return ((lifeExpectancy - this.calculateAge()) * 365) / 88;
-  }
-  leftAgeOnVenus() {
-    return ((lifeExpectancy - this.calculateAge()) * 365) / 225;
-  }
-  leftAgeOnMars() {
-    return ((lifeExpectancy - this.calculateAge()) * 365) / 687;
-  }
-  leftAgeOnJupiter() {
-    return (lifeExpectancy - this.calculateAge()) / 12;
-  }
+//   calculateAgeOnEarth() {
+//     return `Your age on earth is ${this.calculateAge()} years` ;
+//   }
 
-  surpassedAgeOnEarth() {
-    if (this.calculateAge() > lifeExpectancy)
-      return this.calculateAge() - lifeExpectancy;
-  }
-  surpassedAgeOnMercury() {
-    if (this.calculateAge() > lifeExpectancy)
-      return ((this.calculateAge() - lifeExpectancy) * 365) / 88;
-  }
-  surpassedAgeOnVenus() {
-    if (this.calculateAge() > lifeExpectancy)
-      return ((this.calculateAge() - lifeExpectancy) * 365) / 225;
-  }
-  surpassedAgeOnMars() {
-    if (this.calculateAge() > lifeExpectancy)
-      return ((this.calculateAge() - lifeExpectancy) * 365) / 687;
-  }
-  surpassedAgeOnJupiter() {
-    if (this.calculateAge() > lifeExpectancy)
-      return (this.calculateAge() - lifeExpectancy) / 12;
-  }
-}
+//   calculateAgeMercury() {
+//     return `Your age on Mercury is ${(this.calculateAge() * 365 / 88).toFixed(1)} years`
+//     return (this.calculateAge() * 365) / 88;
+//   }
+//   calculateAgeVenus() {
+//     return (this.calculateAge() * 365) / 225;
+//   }
+//   calculateAgeMars() {
+//     return (this.calculateAge() * 365) / 687;
+//   }
+//   calculateAgeJupiter() {
+//     return this.calculateAge() / 12;
+//   }
+
+//   getStatusOnEarth() {
+//     const age = this.calculateAge();
+//     if(lifeExpectancy >= age) {
+//       // 'You have ' + (lifeExpectency - age) + ' years left';
+//       return `You have ${lifeExpectancy - age} years left`;
+//     } else {
+//       return `You have lived past ${age - lifeExpectancy } years`;
+//     }
+//   }
+//   leftAgeOnEarth() {
+//     return lifeExpectancy - this.calculateAge();
+//   }
+//   leftAgeOnMercury() {
+//     return ((lifeExpectancy - this.calculateAge()) * 365) / 88;
+//   }
+//   leftAgeOnVenus() {
+//     return ((lifeExpectancy - this.calculateAge()) * 365) / 225;
+//   }
+//   leftAgeOnMars() {
+//     return ((lifeExpectancy - this.calculateAge()) * 365) / 687;
+//   }
+//   leftAgeOnJupiter() {
+//     return (lifeExpectancy - this.calculateAge()) / 12;
+//   }
+
+//   surpassedAgeOnEarth() {
+//     if (this.calculateAge() > lifeExpectancy) {
+//       return this.calculateAge() - lifeExpectancy;
+//     }
+//     return null;
+//   }
+//   surpassedAgeOnMercury() {
+//     if (this.calculateAge() > lifeExpectancy)
+//       return ((this.calculateAge() - lifeExpectancy) * 365) / 88;
+//   }
+//   surpassedAgeOnVenus() {
+//     if (this.calculateAge() > lifeExpectancy)
+//       return ((this.calculateAge() - lifeExpectancy) * 365) / 225;
+//   }
+//   surpassedAgeOnMars() {
+//     if (this.calculateAge() > lifeExpectancy)
+//       return ((this.calculateAge() - lifeExpectancy) * 365) / 687;
+//   }
+//   surpassedAgeOnJupiter() {
+//     if (this.calculateAge() > lifeExpectancy)
+//       return (this.calculateAge() - lifeExpectancy) / 12;
+//   }
+// }
 
 // ......................................End................................
 
