@@ -17,6 +17,10 @@ describe("Current PersonAge", () => {
     let age = new PersonAge("2000-1-1");
     expect(age.calculateAgeOnMars()).toEqual(`Your age on Mars is 11 years`);
   });
+  test("should correctly give the person age on Jupiter", () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.calculateAgeOnJupiter()).toEqual(`Your age on Jupiter is 2 years`);
+  });
 });
 
 // test("should correctly give the person age on Earth", () => {
