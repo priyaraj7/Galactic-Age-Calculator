@@ -28,6 +28,6 @@ export class PersonAge {
     return `Your age on Mercury is ${Math.ceil(this.calculateAge() * 365 / 88)} years`
   }
   calculateAgeOnVenus() {
-    
+    return `Your age on Venus is ${Math.ceil(this.calculateAge() * 365 / 225)} years`
   }
 }
