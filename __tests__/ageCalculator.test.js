@@ -1,6 +1,10 @@
 import { PersonAge } from "../src/age";
 
-describe("PersonAge", () => {
+describe("Current PersonAge", () => {
+  test("should correctly give the person age on Earth"), () => {
+    let age = new PersonAge("2000-1-1");
+    expect(age.calculateAgeOnEarth()()).toEqual('Your age on is 20 years');
+  }
   // test("should correctly give the person age on Earth", () => {
   //   let age = new PersonAge("2000-1-1");
 
