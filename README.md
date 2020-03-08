@@ -10,7 +10,7 @@ This application determines a user’s age based on a planet’s solar years.
 
 A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days.
 
-To see this webpage [click here](https://priyaraj7.github.io/Galactic-Age-Calculator/).
+To see this webpage [click here](https://priyaraj7.github.io/Galactic-Age-Calculator/dist/).
 
 ## Specifications:
 
