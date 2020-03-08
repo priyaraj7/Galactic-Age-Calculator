@@ -1,30 +1,24 @@
-body {
-  background-color: chartreuse;
-}
+
 h1 {
   color: blue;
   text-align: center;
 }
 img {
-  height: 350px;
-  width: 350;
+  height: 250px;
+  width: 250;
 }
-.box {
-  width: 80px;
-  height: 70px;
-  border: 1px solid #000;
-}
-.age,
-.surplus,
-.alive {
-  display: none;
-}
-.passed-expetency .surplus,
-.passed-expetency .age {
-  display: block;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
-.not-passed-expetency .alive,
-.not-passed-expetency .age {
-  display: block;
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.output {
+  display: none;
 }

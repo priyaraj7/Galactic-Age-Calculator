@@ -25,40 +25,26 @@ $(document).ready(function() {
   });
   $("form#enter").submit(function(event) {
     event.preventDefault();
-
-    var date = $("#birthday").val();
-    console.log(date);
+    let date = $("#birthday").val();
+    if (date.length === 0) {
+      alert("Please select your birthdate");
+      return;
+    }
+    $(".output").show();
 
     let age = new PersonAge(date);
 
-    $("#ageEarth").text(age.calculateAge());
+    $("#ageEarth").text(age.calculateAgeOnEarth());
 
-    $("#ageMercury").text(age.calculateAgeMercury().toFixed(1));
-    $("#ageVenus").text(age.calculateAgeVenus().toFixed(1));
-    $("#ageMars").text(age.calculateAgeMars().toFixed(1));
-    $("#ageJupiter").text(age.calculateAgeJupiter().toFixed(1));
+    $("#ageMercury").text(age.calculateAgeOnMercury());
+    $("#ageVenus").text(age.calculateAgeOnVenus());
+    $("#ageMars").text(age.calculateAgeOnMars());
+    $("#ageJupiter").text(age.calculateAgeOnJupiter());
 
-    $("#leftEarth").text(age.leftAgeOnEarth().toFixed(1));
-    $("#leftMercury").text(age.leftAgeOnMercury().toFixed(1));
-    $("#leftVenus").text(age.leftAgeOnVenus().toFixed(1));
-    $("#leftMars").text(age.leftAgeOnMars().toFixed(1));
-    $("#leftJupiter").text(age.leftAgeOnJupiter().toFixed(1));
-
-    $("#surpassEarth").text(age.surpassedAgeOnEarth().toFixed(1));
-    $("#surpassMercury").text(age.surpassedAgeOnMercury().toFixed(1));
-    $("#surpassVenus").text(age.surpassedAgeOnVenus().toFixed(1));
-    $("#surpassMars").text(age.surpassedAgeOnMars().toFixed(1));
-    $("#surpassJupiter").text(age.surpassedAgeOnJupiter().toFixed(1));
-debugger
-    if (age < 79) {
-      $(".output")
-        .addClass("not-passed-expetency")
-        .removeClass("passed-expetency");
-    } else {
-      $(".output")
-        .removeClass("not-passed-expetency")
-        .addClass("passed-expetency");
-    }
-
+    $("#statusEarth").text(age.getStatusOnEarth());
+    $("#statusMercury").text(age.getStatusOnMercury());
+    $("#statusVenus").text(age.getStatusOnVenus());
+    $("#statusMars").text(age.getStatusOnMars());
+    $("#statusJupiter").text(age.getStatusOnJupiter());
   });
 });
