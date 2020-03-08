@@ -20,7 +20,7 @@ $(document).ready(function() {
   datepicker("#birthday", {
     formatter: (input, date) => {
       const value = date.toISOString().split("T")[0];
-      input.value = value; // => 2000-12-31
+      input.value = value;
     }
   });
   $("form#enter").submit(function(event) {
