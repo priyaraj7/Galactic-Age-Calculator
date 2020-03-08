@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galactic Age Calculator</title>
+  </head>
+  <div class="jumbotron">
+    <h1>Super Galactic Age Calculator</h1>
+  </div>
+  <body>
+    <div class="container">
+      <p>
+        Select your birthday below and click the calculate button to see how old
+        you would be on other planets.
+      </p>
+
+      <form id="enter">
+        <label for="birthday">Birthday:</label>
+        <input type="text" id="birthday" name="birthday" />
+        <input type="submit" value="calculate" />
+      </form>
+
+      <div class="output">
+        <div class="row">
+          <div class="col-md-4 earth">
+            <img id="earth" /><br /><br />
+            <ul id="earthOutput">
+              <li class="age">
+                <span id="ageEarth"></span>
+              </li>
+              <li class="alive">
+                <span id="statusEarth"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mercury">
+            <img id="mercury" />
+            <ul id="mercuryOutput">
+              <li class="age">
+                <span id="ageMercury"></span>
+              </li>
+              <li class="alive">
+                <span id="statusMercury"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mars">
+            <img id="mars" />
+            <ul id="marsOutput">
+              <li class="age"><span id="ageMars"></span></li>
+              <li class="alive">
+                <span id="statusMars"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 venus">
+            <img id="venus" />
+            <ul id="venusOutput">
+              <li class="age">
+                <span id="ageVenus"></span>
+              </li>
+
+              <li class="alive">
+                <span id="statusVenus"></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 jupiter">
+            <img id="jupiter" />
+            <ul id="jupiterOutput">
+              <li class="age">
+                <span id="ageJupiter"></span>
+              </li>
+              <li class="alive">
+                <span id="statusJupiter"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
+
+
