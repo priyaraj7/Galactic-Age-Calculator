@@ -12,6 +12,8 @@ A solar year lasts 365 days on planet Earth. However, the length of a solar year
 
 To see this webpage [click here](https://priyaraj7.github.io/Galactic-Age-Calculator/dist/).
 
+![](/imgs/readme-image.png)
+
 ## Specifications:
 
 | TDD                                                                                                                               | Input        |                                  Output |
